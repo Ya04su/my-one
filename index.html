@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dessert World</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="logo">
+            Dessert World
+        </div>
+
+        <div class="search-box">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search products..."
+            >
+            <button onclick="searchProducts()">Search</button>
+        </div>
+
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#contact">Contact</a>
+            <a href="#products">Products</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#order">Order</a>
+            <a href="#login">Login</a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section id="home" class="home-section">
+
+            <div class="home-content">
+                <h1>DESERT YOU DESERVE THE VALUE</h1>
+
+                <p>
+                    Just taste the best desert at affordable prices.
+                </p>
+
+                <button class="primary-btn"
+                        onclick="scrollToSection('products')">
+                    Shop Now
+                </button>
+            </div>
+
+            <div class="home-image">
+                <img
+                    src="https://images.pexels.com/photos/205961/pexels-photo-205961.jpeg?cs=srgb&dl=pexels-igor-ovsyannykov-56123-205961.jpg&fm=jpg"
+                    alt="Shop image"
+                >
+            </div>
+
+        </section>
+
+
+        <section id="products" class="section">
+
+            <h2>Our Products</h2>
+
+            <div class="products-container" id="productsContainer">
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img
+                            src="https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?cs=srgb&dl=bakery-baking-blueberries-291528.jpg&fm=jpg"
+                            alt="Cakes"
+                        >
+                    </div>
+
+                    <h3>Cakes</h3>
+                    <p>Sweet & Tasty one .</p>
+                    <span class="price">$50</span>
+
+                    <button onclick="addToCart('Cakes')">
+                        Add to Cart
+                    </button>
+                </div>
+
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img
+                            src="https://tse2.mm.bing.net/th/id/OIP.wjn7VQWIhihwmgKnILD41gHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+                            alt="MilkShakes"
+                        >
+                    </div>
+
+                    <h3>MilkShakes</h3>
+                    <p>Comfortable in every sip.</p>
+                    <span class="price">$70</span>
+
+                    <button onclick="addToCart('MilkShakes')">
+                        Add to Cart
+                    </button>
+                </div>
+
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img
+                            src="https://static.vecteezy.com/system/resources/thumbnails/029/354/678/small_2x/a-front-view-fresh-fruit-cocktails-with-fresh-fruit-slices-ice-cooling-on-blue-drink-juice-co-free-photo.jpg"
+                            alt="Juice"
+                        >
+                    </div>
+
+                    <h3>Juice</h3>
+                    <p>Nature one.</p>
+                    <span class="price">$250</span>
+
+                    <button onclick="addToCart('Juice')">
+                        Add to Cart
+                    </button>
+                </div>
+
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img
+                            src="https://tse1.mm.bing.net/th/id/OIP.IgXWgJIdOLR_8AtDR1ErCQHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+                            alt="Dessert"
+                        >
+                    </div>
+
+                    <h3>Dessert</h3>
+                    <p>High-quality wireless sound.</p>
+                    <span class="price">$90</span>
+
+                    <button onclick="addToCart('Dessert')">
+                        Add to Cart
+                    </button>
+                </div>
+
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img
+                            src="https://tse3.mm.bing.net/th/id/OIP.Cl0vxGTsKCg6TuKqv3bs-wHaLd?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+                            alt="Frozen Yogurt"
+                        >
+                    </div>
+
+                    <h3>Frozen Yogurt</h3>
+                    <p>Healthy one.</p>
+                    <span class="price">$60</span>
+
+                    <button onclick="addToCart('Frozen Yogurt')">
+                        Add to Cart
+                    </button>
+                </div>
+
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=500&q=80"
+                            alt="Coffee"
+                        >
+                    </div>
+
+                    <h3>Coffee</h3>
+                    <p>Fresh and delicious coffee.</p>
+                    <span class="price">$20</span>
+
+                    <button onclick="addToCart('Coffee')">
+                        Add to Cart
+                    </button>
+                </div>
+
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img
+                            src="https://tse1.mm.bing.net/th/id/OIP.qsb4akOFBuuREno5krlnhgHaEJ?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+                            alt="Fries"
+                        >
+                    </div>
+
+                    <h3>Fries</h3>
+                    <p>Enjoying every bite with crunch.</p>
+                    <span class="price">$45</span>
+
+                    <button onclick="addToCart('Fries')">
+                        Add to Cart
+                    </button>
+                </div>
+
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img
+                            src="https://kj1bcdn.b-cdn.net/media/73787/chocolate_hero1-d62e5444a8734f8d8fe91f5631d51ca5.jpg?width=1200"
+                            alt="Chocolates"
+                        >
+                    </div>
+
+                    <h3> Chocolates</h3>
+                    <p>Entertainment for your home.</p>
+                    <span class="price">$300</span>
+
+                    <button onclick="addToCart('Chocolates')">
+                        Add to Cart
+                    </button>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="reviews" class="reviews-section section">
+
+            <h2>Customer Reviews</h2>
+
+            <div class="review-list" id="reviewList">
+
+                <div class="review">
+                    <h3>John</h3>
+                    <div class="stars">★★★★★</div>
+                    <p>Very good products and fast delivery.</p>
+                </div>
+
+                <div class="review">
+                    <h3>Sarah</h3>
+                    <div class="stars">★★★★☆</div>
+                    <p>I really liked the quality of the products.</p>
+                </div>
+
+            </div>
+
+            <form id="reviewForm" class="review-form">
+
+                <h3>Write a Review</h3>
+
+                <input
+                    type="text"
+                    id="reviewName"
+                    placeholder="Your name"
+                    required
+                >
+
+                <textarea
+                    id="reviewText"
+                    placeholder="Your review"
+                    required
+                ></textarea>
+
+                <button type="submit">
+                    Submit Review
+                </button>
+
+            </form>
+
+        </section>
+
+        <section id="contact" class="contact-section">
+
+            <div id="order" class="order-box">
+
+                <h2>Place Order</h2>
+
+                <form id="orderForm">
+
+                    <label for="name">Name</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        required
+                    >
+
+
+                    <label for="phone">Phone Number</label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        required
+                    >
+
+
+                    <label for="email">Mail ID</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        required
+                    >
+
+
+                    <label for="product">Product</label>
+
+                    <select id="product" required>
+
+                        <option value="">
+                            Select Product
+                        </option>
+
+                        <option value="Cakes">
+                            Cakes
+                        </option>
+
+                        <option value="MilkShakes">
+                            MilkShakes
+                        </option>
+
+                        <option value="Juice">
+                            Juice
+                        </option>
+
+                        <option value="Dessert">
+                            Dessert
+                        </option>
+
+                        <option value="Frozen Yogurt">
+                            Frozen Yogurt
+                        </option>
+
+                        <option value="Coffee">
+                            Coffee
+                        </option>
+
+                        <option value="Fries">
+                            Fries
+                        </option>
+
+                        <option value="Chocolates">
+                            Chocolates
+                        </option>
+
+                    </select>
+
+
+                    <label for="feedback">
+                        Feedback
+                    </label>
+
+                    <textarea
+                        id="feedback"
+                        placeholder="Your feedback"
+                    ></textarea>
+
+
+                    <button type="submit">
+                        Submit Order
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <div class="address-box">
+
+                <h2>Address</h2>
+
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps?q=New%20York&output=embed"
+                        loading="lazy">
+                    </iframe>
+                </div>
+
+                <p>
+                    <strong>Shop Number:</strong>
+                    123
+                </p>
+
+                <p>
+                    <strong>Shop Name:</strong>
+                    MyShop
+                </p>
+
+                <p>
+                    <strong>Address:</strong>
+                    Main Street, New York
+                </p>
+
+                <button onclick="showAddress()">
+                    Show Address
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <section id="login" class="login-section">
+
+        <h2>Login</h2>
+
+        <form id="loginForm">
+
+            <input
+                type="email"
+                id="loginEmail"
+                placeholder="Email"
+                required
+            >
+
+            <input
+                type="password"
+                id="loginPassword"
+                placeholder="Password"
+                required
+            >
+
+            <button type="submit">
+                Login
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <footer>
+
+        <p>
+            © 2026 MyShop. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="Script.js"></script>
+
+</body>
+</html>
